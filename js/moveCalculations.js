@@ -146,21 +146,3 @@ function addSpotUntilOtherTeam(board, currentPiece, xDelta, yDelta) {
   }
   return moves
 }
-
-function otherTeam(team) {
-  return {'playerOne':'playerTwo','playerTwo':'playerOne'}[team]
-}
-
-function filterInvalidSpots(board, currentPiece, moves) {
-  return moves
-        .filter((index) => boundsCheck(index))
-        .filter(([i, j]) => board[i][j].team !== currentPiece.team)
-}
-
-function concat(...xs) {
-  return [].concat(...xs)
-}
-
-function boundsCheck([i, j]) {
-  return i < 8 && j < 8 && i >= 0 && j >= 0
-}

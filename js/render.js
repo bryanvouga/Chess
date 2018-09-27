@@ -58,6 +58,7 @@ function renderButtons() {
     </div>`
   )
 }
+
 function toggleHoverHighlight(state, action) {
   const piece = getPieceInformation(state, action.value)
   const indexToId = (index) => index[0] + ',' + index[1]
@@ -69,11 +70,6 @@ function toggleHoverHighlight(state, action) {
       tile.classList.toggle('hoverHighlight')
     })
   }
-}
-
-//-----HELPERS-----//
-function contains(array, [ii, jj]) {
-  return array.some(([i, j]) => i === ii && j === jj)
 }
 
 function getCssClass(piece, color) {

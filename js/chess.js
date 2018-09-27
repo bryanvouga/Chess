@@ -211,15 +211,3 @@ function back(state) {
     }
   }
 }
-
-//-----HELPERS----//
-function idToIndex(id){
-  return id.split(",").map((str) => Number(str))
-}
-
-function assoc(key, value, object) {
-  return {
-    ...object,
-    [key]: value,
-  }
-}

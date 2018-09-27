@@ -1,19 +1,12 @@
-h1 {
-  text-align: center;
-  margin-bottom: .5em;
-}
-
 .cell {
   height: 12.5%;
   width:  12.5%;
   float: left;
   font-size: 20%;
-  /* wikipedia theme  */
   background-color: #D18B47;,
 }
 
 .cell:nth-child(odd) {
-  /* wikipedia theme  */
   background-color: #FFCE9E;
 }
 
@@ -63,7 +56,6 @@ h1 {
   margin: auto;
   border: 2px solid black;
 }
-
 
 #buttons {
   text-align: center;
