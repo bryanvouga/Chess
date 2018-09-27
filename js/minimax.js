@@ -5,7 +5,7 @@ function minimaxRoot(state) {
   let boards = []
 
   for (let i = 0; i < children.length; i++) {
-    value = minimax(children[i], 2, 'playerOne', 10000, -10000)
+    value = minimax(children[i], 2, 'playerOne', 100000, -100000)
     boards.push({value:value, board:children[i]})
   }
 
@@ -15,13 +15,13 @@ function minimaxRoot(state) {
       minBoard = board
     }
   })
-
-  return {
-    ...state,
-    board: minBoard.board
+  const nextPlayerOneInmate = getPlayerOneInmate(board, minBoard.board)
+  if (nextPlayerOneInmate) {
+    state.playerOneJail.push(nextPlayerOneInmate)
   }
+  state.board = minBoard.board
+  return state
 }
-
 
 function minimax(board, depth, player, alpha, beta) {
   if (depth === 0) {
@@ -30,7 +30,7 @@ function minimax(board, depth, player, alpha, beta) {
   let children = getChildren(board, player)
 
   if (player === "playerTwo") {
-    let value = 10000
+    let value = Infinity
     for (let child of children) {
       value = Math.min(value, minimax(child, depth-1, otherTeam(player), alpha, beta))
       alpha = Math.min(alpha, value)
@@ -42,7 +42,7 @@ function minimax(board, depth, player, alpha, beta) {
   }
 
   if (player === "playerOne") {
-    let value = -10000
+    let value = -Infinity
     for (let child of children) {
       value = Math.max(value, minimax(child, depth-1, otherTeam(player), alpha, beta))
       beta = Math.max(beta, value)
@@ -74,25 +74,23 @@ function getChildren(board, player) {
   return children
 }
 
-function copyTwoDArray(twoDArray) {
-  let copy = []
-  twoDArray.forEach((row, i) => {
-    copy[i] = []
-    row.forEach((piece, j) => {
-      copy[i][j] = piece
-    })
-  })
-  return copy
-}
 
-function copyOneDArray(array) {
-  let copy = []
-  array.forEach((element, i) => {
-    copy.push(element)
-  })
-  return copy
+function getPlayerOneInmate(board1, board2) {
+  let newJail = []
+  board1 = board1.flat().filter((piece) => piece.team === 'playerOne')
+  board2 = board2.flat().filter((piece) => piece.team === 'playerOne')
+  if (board1.length !== board2.length) {
+    let count = {pawn:0, rook:0, knight:0, bishop:0, king:0, queen:0}
+    board1.forEach(piece => count[piece.type]++)
+    board2.forEach(piece => count[piece.type]--)
+    for (var piece in count) {
+      if (count[piece] === 1) {
+        return {team:'playerOne', type:piece}
+      }
+    }
+  }
+  return 0
 }
-
 
 function rateBoard(board) {
   let score = 0

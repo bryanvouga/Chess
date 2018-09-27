@@ -34,3 +34,22 @@ function assoc(key, value, object) {
 function camelCase(word1, word2){
   return word1.toLowerCase() + word2.toLowerCase().charAt(0).toUpperCase() + word2.substr(1)
 }
+
+function copyTwoDArray(twoDArray) {
+  let copy = []
+  twoDArray.forEach((row, i) => {
+    copy[i] = []
+    row.forEach((piece, j) => {
+      copy[i][j] = piece
+    })
+  })
+  return copy
+}
+
+function copyOneDArray(array) {
+  let copy = []
+  array.forEach((element, i) => {
+    copy.push(element)
+  })
+  return copy
+}
