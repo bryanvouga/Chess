@@ -30,3 +30,7 @@ function assoc(key, value, object) {
     [key]: value,
   }
 }
+
+function camelCase(word1, word2){
+  return word1.toLowerCase() + word2.toLowerCase().charAt(0).toUpperCase() + word2.substr(1)
+}
