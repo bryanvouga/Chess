@@ -1,0 +1,77 @@
+h1 {
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.cell {
+  height: 12.5%;
+  width:  12.5%;
+  float: left;
+  font-size: 20%;
+  /* wikipedia theme  */
+  background-color: #D18B47;,
+}
+
+.cell:nth-child(odd) {
+  /* wikipedia theme  */
+  background-color: #FFCE9E;
+}
+
+.highlight {
+  background-color:#A0A0A0;
+}
+
+.hoverHighlight {
+  background-color:#A0A0A0;
+}
+
+.cell:nth-child(odd).highlight {
+  background-color: #C0C0C0;
+}
+
+.cell:nth-child(odd).hoverHighlight {
+  background-color: #C0C0C0;
+}
+
+.jailCell {
+  height: 30px;
+  width:  30px;
+  background-color: white;
+  border: 0px solid black;
+  padding-left: 1px;
+  float: left;
+}
+
+.jail {
+  width: 500px;
+  height: 35.5px;
+  margin: auto;
+  background-color:
+}
+
+#blackJail {
+  padding-bottom: 5px;
+}
+
+#whiteJail {
+  padding-top: 5px;
+}
+
+#board {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 2px solid black;
+}
+
+
+#buttons {
+  text-align: center;
+  position: relative;
+}
+
+.button {
+  width: 60px;
+  height: 30px;
+  margin-right: 10px;
+}

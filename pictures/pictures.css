@@ -1,0 +1,95 @@
+.whitePawn {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 0%;
+  background-position-x: 100.5%;
+  background-size: 540% 180%;
+}
+
+.whiteRook {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 0%;
+  background-position-x: 80.5%;
+  background-size: 540% 180%;
+}
+
+.whiteKnight {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 0%;
+  background-position-x: 60.5%;
+  background-size: 540% 180%;
+}
+
+.whiteBishop {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: -2.5%;
+  background-position-x: 40%;
+  background-size: 540% 180%;
+}
+
+.whiteQueen {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 0%;
+  background-position-x: 19.5%;
+  background-size: 540% 180%;
+}
+
+.whiteKing {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 0%;
+  background-position-x: -1%;
+  background-size: 540% 180%;
+}
+
+.blackPawn {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 110%;
+  background-position-x: 100.5%;
+  background-size: 540% 180%;
+}
+
+.blackRook {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 110%;
+  background-position-x: 80.5%;
+  background-size: 540% 180%;
+}
+
+.blackKnight {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 110%;
+  background-position-x: 60.5%;
+  background-size: 540% 180%;
+}
+
+.blackBishop {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 110%;
+  background-position-x: 40%;
+  background-size: 540% 180%;
+}
+
+.blackQueen {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 110%;
+  background-position-x: 19.5%;
+  background-size: 540% 180%;
+}
+
+.blackKing {
+  background-image: url("pieces.svg");
+  background-repeat: no-repeat;
+  background-position-y: 110%;
+  background-position-x: -1%;
+  background-size: 540% 180%;
+}
